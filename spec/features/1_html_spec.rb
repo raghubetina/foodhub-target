@@ -119,15 +119,18 @@ describe "The landing page" do
     address_label = find("label", :text => /Enter your address below/i)
     for_attribute = address_label[:for]
     
-    expect(for_attribute).to_not be_empty,
-      "Expected label's for attribute to be set to a non empty value, was '#{for_attribute}' instead."
+    if for_attribute.nil?
+      expect(for_attribute).to_not be_empty,
+        "Expected label's for attribute to be set to a non empty value, was '#{for_attribute}' instead."
+    else
+      all_inputs = all("input")
+  
+      all_input_ids = all_inputs.map { |input| input[:id] }
+  
+      expect(all_input_ids.count(for_attribute)).to eq(1),
+        "Expected label's for attribute(#{for_attribute}) to match only 1 of the ids of an <input> tag (#{all_input_ids}), but found 0 or more than 1."  
+    end
 
-    all_inputs = all("input")
-
-    all_input_ids = all_inputs.map { |input| input[:id] }
-
-    expect(all_input_ids.count(for_attribute)).to eq(1),
-      "Expected label's for attribute(#{for_attribute}) to match only 1 of the ids of an <input> tag (#{all_input_ids}), but found 0 or more than 1."
   end
 end
 
@@ -139,7 +142,6 @@ describe "The landing page" do
     email_label = find("label", :text => /Email address/i)
     for_attribute = email_label[:for]
 
-    # TODO
     expect(for_attribute).to_not be_empty,
       "Expected label's for attribute to be set to a non empty value, was '#{for_attribute}' instead."
   end
@@ -151,16 +153,18 @@ describe "The landing page" do
     
     address_label = find("label", :text => /Email address/i)
     for_attribute = address_label[:for]
-    
-    #TODO shouldn't have 2 expectations, but can't think of how else to not make this accidently pass with nil
-    # I guess I could just not allow nil, but that seems 
-    expect(for_attribute).to_not be_empty,
-      "Expected label's for attribute to be set to a non empty value, was '#{for_attribute}' instead."
 
-    all_input_ids = all_inputs.map { |input| input[:id] }
-
-    expect(all_input_ids.count(for_attribute)).to eq(1),
-      "Expected the label's for attribute(#{for_attribute}) to match 1 of the ids of the inputs(#{all_input_ids}), but didn't."  
+    if for_attribute.nil?
+      expect(for_attribute).to_not be_empty,
+        "Expected label's for attribute to be set to a non empty value, was '#{for_attribute}' instead."
+    else
+      all_inputs = all("input")
+  
+      all_input_ids = all_inputs.map { |input| input[:id] }
+  
+      expect(all_input_ids.count(for_attribute)).to eq(1),
+        "Expected label's for attribute(#{for_attribute}) to match only 1 of the ids of an <input> tag (#{all_input_ids}), but found 0 or more than 1."  
+    end
   end
 end
 
@@ -172,7 +176,6 @@ describe "The landing page" do
     address_label = find("label", :text => /Zip Code/i)
     for_attribute = address_label[:for]
     
-    # TODO right method? 
     expect(for_attribute).to_not be_empty,
      "Expected label's for attribute to be set to a non empty value, was '#{for_attribute}' instead."
   end
@@ -185,12 +188,16 @@ describe "The landing page" do
     address_label = find("label", :text => /Zip Code/i)
     for_attribute = address_label[:for]
 
-    expect(for_attribute).to_not be_empty,
-      "Expected label's for attribute to be set to a non empty value, was '#{for_attribute}' instead."
-
-    all_input_ids = all_inputs.map { |input| input[:id] }
-
-    expect(all_input_ids.count(for_attribute)).to eq(1),
-      "Expected the label's for attribute(#{for_attribute}) to match 1 of the ids of the inputs(#{all_input_ids}), but didn't."
+    if for_attribute.nil?
+      expect(for_attribute).to_not be_empty,
+        "Expected label's for attribute to be set to a non empty value, was '#{for_attribute}' instead."
+    else
+      all_inputs = all("input")
+  
+      all_input_ids = all_inputs.map { |input| input[:id] }
+  
+      expect(all_input_ids.count(for_attribute)).to eq(1),
+        "Expected label's for attribute(#{for_attribute}) to match only 1 of the ids of an <input> tag (#{all_input_ids}), but found 0 or more than 1."  
+    end
   end
 end
