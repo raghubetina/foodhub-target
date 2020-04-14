@@ -79,7 +79,7 @@ describe "The landing page" do
   it "should have the images 'map.jpg' and 'menu.jpg' be on their own line when browser width is < 768px.", { :js => true, :points => 1} do
     visit "/target"
 
-    # Resize page to be 1024, 768 px
+    # Resize page to be 750, 768 px
     current_window.resize_to(750, 768)
 
     within "html" do
@@ -295,7 +295,7 @@ describe "The landing page" do
       page_width = find("body").rect.width
       
       within "body" do
-        input = find("input[placeholder*=Email]")
+        input = find_field("Email", :placeholder => "Email")
         
         input_width = input.rect.width
 
@@ -319,7 +319,7 @@ describe "The landing page" do
       page_width = find("body").rect.width
       
       within "body" do
-        input = find("input[placeholder*=Zip Code]")
+        input = find_field("Zip Code", :with => "")
         
         input_width = input.rect.width
 
@@ -367,7 +367,7 @@ describe "The landing page" do
       page_width = find("body").rect.width
       
       within "body" do
-        input = find("input[placeholder*=Email]")
+        input = find_field("Email", :placeholder => "Email")
         
         input_width = input.rect.width
 
@@ -393,7 +393,7 @@ describe "The landing page" do
       page_width = find("body").rect.width
       
       within "body" do
-        input = find("input[placeholder*=Zip Code")
+        input = find_field("Zip Code", :with => "")
         
         input_width = input.rect.width
 
@@ -419,7 +419,7 @@ describe "The landing page" do
       page_width = find("body").rect.width
       
       within "body" do
-        button = find("button[placeholder*=Zip Code")
+        button = find("button", :text => /Send me treats/i)
         
         button_width = button.rect.width
 
@@ -434,7 +434,58 @@ describe "The landing page" do
 end
 
 
-# TODO
-# 'About Foodhub' secondary heading is next to 'Foodhub helps you find and order food' paragraph
-# 'About Foodhub' secondary heading and 'Foodhub helps you find and order food' paragraph are on separate lines
+describe "The landing page" do
+  it "has a secondary heading 'About Foodhub' next to 'Foodhub helps you find and order food' paragraph when browser width is >= 768px.", { :js => true, :points => 1} do
+    visit "/target"
+
+    # Resize page to be 1024, 768 px
+    current_window.resize_to(1024, 768)
+
+    within "html" do
+      within "body" do
+        heading = find("h2", :text => /About Foodhub/i)
+        paragraph = find("p", :text => /Foodhub helps you find and order food/i)
+        
+        top_of_heading = heading.rect.y
+        
+        top_of_paragraph = paragraph.rect.y
+        
+        bottom_of_paragraph = top_of_paragraph + paragraph.rect.height
+        
+        expect(top_of_heading).to be_between(top_of_paragraph, bottom_of_paragraph),
+          "Expected the top of heading to be between #{top_of_paragraph} and #{bottom_of_paragraph}, but was #{top_of_heading} instead."
+      
+      end
+    end
+
+  end
+end
+
+describe "The landing page" do
+  it "has a secondary heading 'About Foodhub' 'Foodhub helps you find and order food' paragraph are on separate lines when browser width is < 768px.", { :js => true, :points => 1} do
+    visit "/target"
+
+    # Resize page to be 767, 768 px
+    current_window.resize_to(767, 768)
+
+    within "html" do
+      within "body" do
+        heading = find("h2", :text => /About Foodhub/i)
+        paragraph = find("p", :text => /Foodhub helps you find and order food/i)
+        
+        top_of_heading = heading.rect.y
+        
+        top_of_paragraph = paragraph.rect.y
+        
+        bottom_of_paragraph = top_of_paragraph + paragraph.rect.height
+        
+        expect(top_of_heading).to_not be_between(top_of_paragraph, bottom_of_paragraph),
+          "Expected the top of heading to not be between #{top_of_paragraph} and #{bottom_of_paragraph}, but was #{top_of_heading} instead."
+      
+      end
+    end
+
+  end
+  
+end
 
