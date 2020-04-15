@@ -39,7 +39,7 @@ describe "The landing page" do
 end
 
 describe "The landing page" do
-  it "it has only one footer.", :points => 1 do
+  it "has only one footer.", :points => 1 do
     visit "/"
 
     expect(page).to have_tag("footer", :count => 1),
@@ -48,7 +48,7 @@ describe "The landing page" do
 end
 
 describe "The landing page" do
-  it "it has at least one label.", :points => 0 do
+  it "has at least one label.", :points => 0 do
     visit "/"
     
     expect(page).to have_tag("label", :min => 1),
@@ -57,7 +57,7 @@ describe "The landing page" do
 end
 
 describe "The landing page" do
-  it "it has at least two label.", :points => 1 do
+  it "has at least two label.", :points => 1 do
     visit "/"
     
     expect(page).to have_tag("label", :min => 2),
@@ -65,7 +65,7 @@ describe "The landing page" do
   end
 end
 describe "The landing page" do
-  it "it has exactly 3 labels.", :points => 1 do
+  it "has exactly 3 labels.", :points => 1 do
     visit "/"
     
     expect(page).to have_tag("label", :count => 3),
@@ -74,7 +74,7 @@ describe "The landing page" do
 end
 
 describe "The landing page" do
-  it "it has a label with the text 'Enter your address below.'.", :points => 0 do
+  it "has a label with the text 'Enter your address below.'.", :points => 0 do
     visit "/"
     
     expect(page).to have_tag("label", :text => /Enter your address below/i, :count => 1),
@@ -83,7 +83,7 @@ describe "The landing page" do
 end
 
 describe "The landing page" do
-  it "it has a label with the text 'Email address'.", :points => 1 do
+  it "has a label with the text 'Email address'.", :points => 1 do
     visit "/"
     
     expect(page).to have_tag("label", :text => /Email Address/i, :count => 1),
@@ -92,7 +92,7 @@ describe "The landing page" do
 end
 
 describe "The landing page" do
-  it "it has a label with the text 'Zip Code'.", :points => 1 do
+  it "has a label with the text 'Zip Code'.", :points => 1 do
     visit "/"
     
     expect(page).to have_tag("label", :text => /Zip Code/i, :count => 1),
@@ -101,7 +101,7 @@ describe "The landing page" do
 end
 
 describe "The landing page" do
-  it "it has a label 'Enter your address below.' with a for attribute that is not empty.", :points => 1 do
+  it "has a label 'Enter your address below.' with a for attribute that is not empty.", :points => 1 do
     visit "/"
     
     address_label = find("label", :text => /Enter your address below/i)
@@ -113,7 +113,7 @@ describe "The landing page" do
 end
   
 describe "The landing page" do
-  it "it has a label 'Enter your address below.' with a matching input tag.", :points => 1 do
+  it "has a label 'Enter your address below.' with a matching input tag.", :points => 1 do
     visit "/"
     
     address_label = find("label", :text => /Enter your address below/i)
@@ -136,7 +136,7 @@ end
 
 
 describe "The landing page" do
-  it "it has a label 'Email address' with a for attribute that is not empty.", :points => 1 do
+  it "has a label 'Email address' with a for attribute that is not empty.", :points => 1 do
     visit "/"
     
     email_label = find("label", :text => /Email address/i)
@@ -148,7 +148,7 @@ describe "The landing page" do
 end
 
 describe "The landing page" do
-  it "it has a label 'Email address' with a matching input tag.", :points => 1 do
+  it "has a label 'Email address' with a matching input tag.", :points => 1 do
     visit "/"
     
     address_label = find("label", :text => /Email address/i)
@@ -170,7 +170,7 @@ end
 
 
 describe "The landing page" do
-  it "it has a label 'Zip Code' with a for attribute that is not empty.", :points => 1 do
+  it "has a label 'Zip Code' with a for attribute that is not empty.", :points => 1 do
     visit "/"
     
     address_label = find("label", :text => /Zip Code/i)
@@ -182,7 +182,7 @@ describe "The landing page" do
 end
 
 describe "The landing page" do
-  it "it has a label 'Zip Code' with a matching input tag.", :points => 1 do
+  it "has a label 'Zip Code' with a matching input tag.", :points => 1 do
     visit "/"
     
     address_label = find("label", :text => /Zip Code/i)

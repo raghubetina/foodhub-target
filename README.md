@@ -21,31 +21,31 @@ This is [the Target App](http://foodhub-bootstrap.herokuapp.com/).
 
 1. The landing page has a nav tag that contains the shopping icon link.
 
-1. The landing page it has only one footer.
+1. The landing page has only one footer.
 
-1. The landing page it has at least one label.
+1. The landing page has at least one label.
 
-1. The landing page it has at least two label.
+1. The landing page has at least two label.
 
-1. The landing page it has exactly 3 labels.
+1. The landing page has exactly 3 labels.
 
-1. The landing page it has a label with the text 'Enter your address below.'.
+1. The landing page has a label with the text 'Enter your address below.'.
 
-1. The landing page it has a label with the text 'Email address'.
+1. The landing page has a label with the text 'Email address'.
 
-1. The landing page it has a label with the text 'Zip Code'.
+1. The landing page has a label with the text 'Zip Code'.
 
-1. The landing page it has a label 'Enter your address below.' with a for attribute that is not empty.
+1. The landing page has a label 'Enter your address below.' with a for attribute that is not empty.
 
-1. The landing page it has a label 'Enter your address below.' with a matching input tag.
+1. The landing page has a label 'Enter your address below.' with a matching input tag.
 
-1. The landing page it has a label 'Email address' with a for attribute that is not empty.
+1. The landing page has a label 'Email address' with a for attribute that is not empty.
 
-1. The landing page it has a label 'Email address' with a matching input tag.
+1. The landing page has a label 'Email address' with a matching input tag.
 
-1. The landing page it has a label 'Zip Code' with a for attribute that is not empty.
+1. The landing page has a label 'Zip Code' with a for attribute that is not empty.
 
-1. The landing page it has a label 'Zip Code' with a matching input tag.
+1. The landing page has a label 'Zip Code' with a matching input tag.
 
 1. The landing page should have a nav element with a mostly red background color.
 
