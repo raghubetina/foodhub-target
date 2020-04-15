@@ -97,13 +97,13 @@ GEM
       zeitwerk (~> 2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    amazing_print (1.0.0)
     annotate (3.1.1)
       activerecord (>= 3.2, < 7.0)
       rake (>= 10.4, < 14.0)
     arbre (1.2.1)
       activesupport (>= 3.0.0)
     ast (2.4.0)
-    awesome_print (1.8.0)
     babel-source (5.8.35)
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
@@ -456,8 +456,8 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin (= 2.2.0)
+  amazing_print
   annotate
-  awesome_print
   bcrypt
   better_errors
   binding_of_caller

@@ -21,10 +21,7 @@ RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
   config.include RSpecHtmlMatchers
   config.example_status_persistence_file_path = "examples.txt"
-  config.tty = true
-  config.failure_color = :white
-  config.success_color = :white
-  config.detail_color = :white
+  
   def h(hint_identifiers)
     hint_identifiers.split.map { |identifier| I18n.t("hints.#{identifier}") }
   end

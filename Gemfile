@@ -45,7 +45,7 @@ gem 'sassc-rails'
 gem 'execjs'
 gem 'therubyracer', platforms: :ruby
 group :development, :test do
-  gem 'awesome_print'
+  gem 'amazing_print'
   gem 'dotenv-rails'
   gem 'grade_runner', github: 'firstdraft/grade_runner'
   gem 'pry-rails'
