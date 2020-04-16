@@ -35,7 +35,7 @@ I place these in the `<head>` of _almost_ every HTML document I write:
 
 ## Recommended steps
 
- 1. Get as far as you can with Bootstrap alone.
+ 1. Get as far as you can [with Bootstrap alone](https://getbootstrap.com/docs/4.4/components/alerts/).
  1. Then add your own external stylesheet and sprinkle in your own CSS as needed.
  1. Post questions on Piazza.
  1. Refer to the walkthrough video as little as possible.
