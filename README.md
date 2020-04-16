@@ -99,8 +99,5 @@ I place these in the `<head>` of _almost_ every HTML document I write:
  1. The landing page has an 'Email' input with a width that is between 1/4th and 1/5th of the browser width when window is 1000px wide.
  1. The landing page has an 'Zip Code' input with a width that is between 1/4th and 1/5th of the browser width when window is 1000px wide.
  1. The landing page has an 'Send me treats' button with a width that is between 1/4th and 1/5th of the browser width when window is 1000px wide.
- 1. The landing page has an 'Email' input with a width that is between 90% and 100% of the browser width when window is < 768px wide.
- 1. The landing page has an 'Zip Code' input with a width that is between 90% and 100% of the browser width when window is < 768px wide.
- 1. The landing page has an 'Send me treats' button with a width that is between 90% and 100% of the browser width when window is < 768px wide.
  1. The landing page has a secondary heading 'About Foodhub' next to 'Foodhub helps you find and order food' paragraph when browser width is >= 768px.
  1. The landing page has a secondary heading 'About Foodhub' 'Foodhub helps you find and order food' paragraph are on separate lines when browser width is < 768px.
