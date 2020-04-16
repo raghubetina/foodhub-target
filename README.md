@@ -1,4 +1,4 @@
-# Foodhub Boostrap
+# Foodhub
 
 Here is our target for this project:
 
