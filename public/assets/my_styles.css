@@ -1,0 +1,46 @@
+/* Additional styles */
+
+body {
+  padding-top: 74px;
+  font-family: "Montserrat";
+}
+
+h1, h2, h3, h4, h5, h6  {
+  font-weight: 700;
+}
+
+.navbar-brand {
+  font-family: "Passion One";
+  font-size: xx-large;
+}
+
+.py-6 {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+/* Backgrounds for each section of the page */
+
+.who-delivers {
+  background: url("/assets/images/main-hero.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.download-apps {
+  background: url("/assets/images/download-hero.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+/* Miscellaneous */
+
+.spotlight-image {
+  width: 200px;
+}
+
+.user-image {
+  width: 50px;
+}
+
+.store-badge {
+  width: 200px;
+}
