@@ -33,6 +33,12 @@ I place these in the `<head>` of _almost_ every HTML document I write:
  1. As you work, remember to navigate to /git and **Always Be Committing.**
  1. Run `rails grade` as often as you like to see how you are doing, but **make sure you test your app manually first to make sure it matches the target's behavior first**.
 
+## Recommended steps
+
+ 1. Get as far as you can with Bootstrap alone.
+ 1. Then add your own external stylesheet and sprinkle in your own CSS as needed.
+ 1. Post questions on Piazza.
+ 1. Refer to the walkthrough video as little as possible.
 
 ## Specs
 
